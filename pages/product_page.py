@@ -14,9 +14,9 @@ class ProductPage(BasePage):
 	def should_be_choosen_product_name(self):
 		my_product = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
 		product_in_basket = self.browser.find_element(*ProductPageLocators.ADDED_PRODUCT_NAME).text
-		assert my_product == product_in_basket, f"Product names {my_product} and {product_in_basket} don't match"
+		assert my_product == product_in_basket, f"Product names '{my_product}' and '{product_in_basket}' don't match"
 
 	def should_be_choosen_product_price(self):
 		my_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
 		price_in_basket = self.browser.find_element(*ProductPageLocators.ADDED_PRODUCT_PRICE).text
-		assert my_price == price_in_basket, f"Product prices {my_price} and {price_in_basket} don't match"
+		assert my_price == price_in_basket, f"Product prices '{my_price}' and '{price_in_basket}' don't match"
